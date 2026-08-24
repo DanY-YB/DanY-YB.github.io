@@ -7,37 +7,16 @@
 
   <title>Dan Yang | Academic Website</title>
 
-  <meta name="description"
-        content="Dan Yang - Academic website. Research interests include international trade, particulate organic carbon, dissolved organic carbon, satellite remote sensing, and machine learning.">
-
   <style>
-
-    /* =========================
-       GLOBAL
-    ========================= */
-
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
       color: #222;
-      background: #ffffff;
+      background: #fff;
       line-height: 1.7;
     }
 
@@ -51,1186 +30,273 @@
     }
 
     .container {
-      width: 92%;
-      max-width: 1100px;
-      margin: auto;
+      width: 90%;
+      max-width: 850px;
+      margin: 0 auto;
     }
 
-
-    /* =========================
-       NAVIGATION
-    ========================= */
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-
-      background: rgba(255, 255, 255, 0.96);
-      border-bottom: 1px solid #e5e5e5;
-      backdrop-filter: blur(8px);
-    }
-
-    .nav-container {
-      max-width: 1100px;
-      width: 92%;
-      margin: auto;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      min-height: 66px;
-    }
-
-    .nav-name {
-      font-size: 21px;
-      font-weight: 700;
-      color: #222;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-    }
-
-    .nav-links a {
-      color: #333;
-      font-size: 15px;
-      font-weight: 500;
-    }
-
-
-    /* =========================
-       HERO / HOME
-    ========================= */
-
-    .hero {
-      padding: 85px 0 75px;
+    header {
+      padding: 70px 0 45px;
       border-bottom: 1px solid #eee;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 55px;
+    .profile {
+      display: flex;
       align-items: center;
+      gap: 35px;
     }
 
-    .profile-photo {
-      width: 210px;
-      height: 210px;
-
+    .profile img {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       object-fit: cover;
-
       border: 1px solid #ddd;
-      background: #f3f3f3;
     }
 
-    .hero h1 {
-      font-size: 46px;
-      line-height: 1.15;
-      margin-bottom: 12px;
-      font-weight: 700;
+    h1 {
+      font-size: 40px;
+      margin: 0 0 8px;
     }
 
-    .hero-title {
-      font-size: 21px;
+    .position {
+      font-size: 19px;
       color: #555;
-      margin-bottom: 8px;
+      margin-bottom: 16px;
     }
 
-    .hero-affiliation {
-      font-size: 17px;
-      color: #666;
+    .links {
+      margin-top: 18px;
+    }
+
+    .links a {
+      margin-right: 18px;
+      font-weight: 500;
+    }
+
+    section {
+      padding: 45px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    h2 {
+      font-size: 27px;
       margin-bottom: 22px;
     }
 
-    .hero-description {
-      font-size: 17px;
-      max-width: 720px;
-      color: #444;
-      margin-bottom: 24px;
+    .research-list {
+      padding-left: 20px;
     }
 
-    .research-keywords {
-      font-size: 15px;
-      color: #666;
-      margin-bottom: 24px;
-    }
-
-    .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .button {
-      display: inline-block;
-
-      border: 1px solid #1769aa;
-      border-radius: 6px;
-
-      padding: 8px 14px;
-
-      color: #1769aa;
-      font-size: 14px;
-      font-weight: 500;
-
-      transition: 0.2s;
-    }
-
-    .button:hover {
-      background: #1769aa;
-      color: white;
-      text-decoration: none;
-    }
-
-    .button-dark {
-      background: #1769aa;
-      color: white;
-    }
-
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    section {
-      padding: 75px 0;
-    }
-
-    section:nth-of-type(even) {
-      background: #fafafa;
-    }
-
-    .section-title {
-      font-size: 32px;
-      margin-bottom: 32px;
-      font-weight: 700;
-    }
-
-    .section-subtitle {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 35px;
-      max-width: 850px;
-    }
-
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about-text {
-      max-width: 900px;
-      font-size: 17px;
-      color: #444;
-    }
-
-    .about-text p {
-      margin-bottom: 18px;
-    }
-
-
-    /* =========================
-       RESEARCH
-    ========================= */
-
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .research-card {
-      padding: 28px;
-
-      border: 1px solid #e3e3e3;
-      border-radius: 10px;
-
-      background: white;
-    }
-
-    .research-card h3 {
-      font-size: 20px;
-      margin-bottom: 13px;
-    }
-
-    .research-card p {
-      color: #555;
-      font-size: 15px;
-    }
-
-    .research-number {
-      font-size: 14px;
-      color: #1769aa;
-      font-weight: 700;
+    .research-list li {
       margin-bottom: 10px;
     }
 
-
-    /* =========================
-       PUBLICATIONS
-    ========================= */
-
     .publication {
-      padding: 23px 0;
-      border-bottom: 1px solid #e5e5e5;
-    }
-
-    .publication:last-child {
-      border-bottom: none;
+      margin-bottom: 25px;
     }
 
     .publication-title {
-      font-size: 18px;
-      font-weight: 650;
-      margin-bottom: 5px;
-    }
-
-    .publication-authors {
-      color: #555;
-      margin-bottom: 4px;
-      font-size: 15px;
-    }
-
-    .publication-journal {
-      color: #777;
-      font-size: 15px;
-      font-style: italic;
-      margin-bottom: 9px;
-    }
-
-    .publication-links a {
-      margin-right: 13px;
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-
-    /* =========================
-       PROJECTS
-    ========================= */
-
-    .project {
-      margin-bottom: 34px;
-    }
-
-    .project h3 {
-      font-size: 20px;
-      margin-bottom: 7px;
-    }
-
-    .project p {
-      max-width: 850px;
-      color: #555;
-    }
-
-
-    /* =========================
-       CV
-    ========================= */
-
-    .cv-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-    }
-
-    .cv-block h3 {
-      margin-bottom: 18px;
-      font-size: 21px;
-    }
-
-    .cv-item {
-      margin-bottom: 22px;
-    }
-
-    .cv-year {
-      color: #1769aa;
       font-weight: 600;
-      font-size: 14px;
     }
 
-    .cv-item strong {
-      display: block;
-      margin-top: 2px;
-    }
-
-    .cv-item span {
+    .publication-info {
       color: #666;
       font-size: 15px;
     }
 
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact-box {
-      max-width: 750px;
-    }
-
-    .contact-box p {
-      font-size: 17px;
-      margin-bottom: 12px;
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
     footer {
-      border-top: 1px solid #eee;
-
-      padding: 35px 0;
-
       text-align: center;
-
-      font-size: 14px;
+      padding: 30px 0;
       color: #777;
+      font-size: 14px;
     }
 
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 800px) {
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 55px;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
+    @media (max-width: 650px) {
+      .profile {
+        flex-direction: column;
         text-align: center;
-        gap: 30px;
       }
 
-      .profile-photo {
-        margin: auto;
-        width: 180px;
-        height: 180px;
+      h1 {
+        font-size: 34px;
       }
 
-      .hero h1 {
-        font-size: 38px;
+      .links a {
+        display: inline-block;
+        margin: 5px 8px;
       }
-
-      .social-links {
-        justify-content: center;
-      }
-
-      .research-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cv-grid {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 55px 0;
-      }
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
+<header>
+  <div class="container">
 
-<!-- ==================================================
-     NAVIGATION
-================================================== -->
+    <div class="profile">
 
-<nav>
+      <img src="profile.jpg" alt="Tao Zhou">
 
-  <div class="nav-container">
+      <div>
 
-    <div class="nav-name">
-      Tao Zhou
-    </div>
+        <h1>Tao Zhou</h1>
 
-    <div class="nav-links">
+        <div class="position">
+          PhD Researcher | Coastal Ocean Remote Sensing
+        </div>
 
-      <a href="#about">About</a>
+        <p>
+          My research focuses on satellite remote sensing of coastal
+          waters, with particular interests in marine carbon dynamics,
+          ocean colour remote sensing, and data-driven environmental analysis.
+        </p>
 
-      <a href="#research">Research</a>
+        <div class="links">
 
-      <a href="#publications">Publications</a>
+          <a href="mailto:YOUR_EMAIL@example.com">
+            Email
+          </a>
 
-      <a href="#projects">Projects</a>
+          <a href="https://github.com/DanY-YB" target="_blank">
+            GitHub
+          </a>
 
-      <a href="#cv">CV</a>
+          <a href="CV_Tao_Zhou.pdf" target="_blank">
+            CV
+          </a>
 
-      <a href="#contact">Contact</a>
-
-    </div>
-
-  </div>
-
-</nav>
-
-
-
-<!-- ==================================================
-     HOME
-================================================== -->
-
-<header class="hero">
-
-  <div class="container hero-grid">
-
-
-    <!--
-      把你的照片上传到 GitHub 仓库，
-      文件名设为 profile.jpg
-    -->
-
-    <img
-      src="profile.jpg"
-      alt="Tao Zhou"
-      class="profile-photo"
-    >
-
-
-    <div>
-
-      <h1>Tao Zhou</h1>
-
-      <div class="hero-title">
-        PhD Researcher
-      </div>
-
-      <div class="hero-affiliation">
-        Coastal Ocean Remote Sensing
-      </div>
-
-
-      <p class="hero-description">
-
-        My research focuses on satellite remote sensing of coastal
-        aquatic environments, with particular interests in particulate
-        organic carbon (POC), dissolved organic carbon (DOC),
-        ocean colour remote sensing, and global coastal carbon dynamics.
-
-      </p>
-
-
-      <div class="research-keywords">
-
-        Satellite Remote Sensing · Coastal Carbon Cycle ·
-        POC & DOC · Ocean Colour · Machine Learning
-
-      </div>
-
-
-      <div class="social-links">
-
-        <!-- 修改邮箱 -->
-        <a
-          class="button button-dark"
-          href="mailto:YOUR_EMAIL@example.com">
-          Email
-        </a>
-
-        <!-- 修改 Google Scholar -->
-        <a
-          class="button"
-          href="YOUR_GOOGLE_SCHOLAR_URL"
-          target="_blank">
-          Google Scholar
-        </a>
-
-        <!-- 修改 ORCID -->
-        <a
-          class="button"
-          href="YOUR_ORCID_URL"
-          target="_blank">
-          ORCID
-        </a>
-
-        <!-- 修改 GitHub -->
-        <a
-          class="button"
-          href="https://github.com/DanY-YB"
-          target="_blank">
-          GitHub
-        </a>
-
-        <!-- 上传 CV 后使用 -->
-        <a
-          class="button"
-          href="CV_Tao_Zhou.pdf"
-          target="_blank">
-          CV
-        </a>
+        </div>
 
       </div>
 
     </div>
 
   </div>
-
 </header>
 
 
-
-<main>
-
-
-<!-- ==================================================
-     ABOUT
-================================================== -->
-
-<section id="about">
-
+<section>
   <div class="container">
 
-    <h2 class="section-title">
-      About Me
-    </h2>
+    <h2>About</h2>
 
-
-    <div class="about-text">
-
-      <p>
-
-        I am a PhD researcher working in the field of
-        aquatic and coastal remote sensing.
-
-      </p>
-
-      <p>
-
-        My research aims to improve our understanding of
-        carbon dynamics in coastal and marine environments
-        through satellite observations, field measurements,
-        statistical modelling, and machine learning.
-
-      </p>
-
-      <p>
-
-        I am particularly interested in developing remote-sensing
-        approaches for monitoring particulate organic carbon (POC)
-        and dissolved organic carbon (DOC), and applying these
-        approaches to investigate long-term changes in global
-        coastal carbon systems.
-
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ==================================================
-     RESEARCH
-================================================== -->
-
-<section id="research">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      Research
-    </h2>
-
-
-    <p class="section-subtitle">
-
-      My research integrates satellite observations,
-      in-situ measurements and data-driven modelling
-      to study carbon dynamics in coastal waters.
-
+    <p>
+      I am a researcher working in aquatic and coastal remote sensing.
+      My work combines satellite observations, field measurements,
+      statistical modelling, and machine learning to study
+      biogeochemical processes in coastal waters.
     </p>
 
-
-    <div class="research-grid">
-
-
-      <div class="research-card">
-
-        <div class="research-number">
-          01
-        </div>
-
-        <h3>
-          Coastal Carbon Remote Sensing
-        </h3>
-
-        <p>
-
-          Developing satellite-based approaches for retrieving
-          and monitoring particulate and dissolved organic carbon
-          in optically complex coastal waters.
-
-        </p>
-
-      </div>
-
-
-
-      <div class="research-card">
-
-        <div class="research-number">
-          02
-        </div>
-
-        <h3>
-          Ocean Colour Algorithms
-        </h3>
-
-        <p>
-
-          Developing adaptive and machine-learning algorithms
-          using ocean-colour observations to improve the retrieval
-          of biogeochemical parameters.
-
-        </p>
-
-      </div>
-
-
-
-      <div class="research-card">
-
-        <div class="research-number">
-          03
-        </div>
-
-        <h3>
-          Global Coastal Change
-        </h3>
-
-        <p>
-
-          Investigating spatial patterns, long-term trends and
-          environmental drivers of coastal carbon using
-          multi-source satellite datasets.
-
-        </p>
-
-      </div>
-
-
-    </div>
-
   </div>
-
 </section>
 
 
-
-<!-- ==================================================
-     PUBLICATIONS
-================================================== -->
-
-<section id="publications">
-
+<section>
   <div class="container">
 
-    <h2 class="section-title">
-      Selected Publications
-    </h2>
+    <h2>Research Interests</h2>
+
+    <ul class="research-list">
+
+      <li>
+        Coastal and ocean remote sensing
+      </li>
+
+      <li>
+        Particulate organic carbon (POC) and dissolved organic carbon (DOC)
+      </li>
+
+      <li>
+        Ocean colour remote sensing
+      </li>
+
+      <li>
+        Global coastal carbon dynamics
+      </li>
+
+      <li>
+        Machine learning and geospatial data analysis
+      </li>
+
+    </ul>
+
+  </div>
+</section>
 
 
-    <!-- PUBLICATION 1 -->
+<section>
+  <div class="container">
+
+    <h2>Selected Publications</h2>
 
     <div class="publication">
 
       <div class="publication-title">
-
-        An adaptive hybrid algorithm for retrieving
-        particulate organic carbon in complex coastal waters
-
+        An adaptive hybrid algorithm for retrieving particulate organic carbon
+        in complex coastal waters
       </div>
 
-      <div class="publication-authors">
-
+      <div class="publication-info">
         Tao Zhou, Wen Zhou, Weilang Xie, et al.
-
       </div>
 
-      <div class="publication-journal">
-
+      <div class="publication-info">
         Journal name, Year
-
-      </div>
-
-      <div class="publication-links">
-
-        <a href="#" target="_blank">
-          DOI
-        </a>
-
-        <a href="#" target="_blank">
-          PDF
-        </a>
-
-        <a href="#" target="_blank">
-          Code
-        </a>
-
       </div>
 
     </div>
 
 
-
-    <!-- PUBLICATION 2 -->
-
     <div class="publication">
 
       <div class="publication-title">
-
         Your second publication title
-
       </div>
 
-      <div class="publication-authors">
-
+      <div class="publication-info">
         Authors
-
       </div>
 
-      <div class="publication-journal">
-
+      <div class="publication-info">
         Journal, Year
-
-      </div>
-
-      <div class="publication-links">
-
-        <a href="#" target="_blank">
-          DOI
-        </a>
-
-        <a href="#" target="_blank">
-          PDF
-        </a>
-
       </div>
 
     </div>
 
+  </div>
+</section>
 
 
-    <!-- PUBLICATION 3 -->
+<section>
+  <div class="container">
 
-    <div class="publication">
+    <h2>Contact</h2>
 
-      <div class="publication-title">
-
-        Your third publication title
-
-      </div>
-
-      <div class="publication-authors">
-
-        Authors
-
-      </div>
-
-      <div class="publication-journal">
-
-        Journal, Year
-
-      </div>
-
-      <div class="publication-links">
-
-        <a href="#" target="_blank">
-          DOI
-        </a>
-
-        <a href="#" target="_blank">
-          PDF
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <p style="margin-top:30px;">
-
-      For a complete publication list, please visit my
-
-      <a
-        href="YOUR_GOOGLE_SCHOLAR_URL"
-        target="_blank">
-
-        Google Scholar profile.
-
+    <p>
+      Email:
+      <a href="dan.yang@studenti.unipd.it">
+        YOUR_EMAIL@example.com
       </a>
+    </p>
 
+    <p>
+      GitHub:
+      <a href="https://github.com/DanY-YB" target="_blank">
+        github.com/DanY-YB
+      </a>
     </p>
 
   </div>
-
 </section>
 
-
-
-<!-- ==================================================
-     PROJECTS
-================================================== -->
-
-<section id="projects">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      Research Projects
-    </h2>
-
-
-
-    <div class="project">
-
-      <h3>
-        Global Coastal Carbon Remote Sensing
-      </h3>
-
-      <p>
-
-        Development of satellite-based approaches for
-        monitoring particulate organic carbon and dissolved
-        organic carbon across global coastal environments,
-        with a focus on long-term trends and environmental drivers.
-
-      </p>
-
-    </div>
-
-
-
-    <div class="project">
-
-      <h3>
-        Adaptive POC Retrieval
-      </h3>
-
-      <p>
-
-        Development and validation of adaptive retrieval
-        algorithms for particulate organic carbon in
-        optically complex coastal waters using satellite
-        remote sensing and machine learning.
-
-      </p>
-
-    </div>
-
-
-
-    <div class="project">
-
-      <h3>
-        Coastal Environmental Change
-      </h3>
-
-      <p>
-
-        Integration of satellite observations, environmental
-        datasets and statistical models to understand
-        anthropogenic and natural controls on coastal ecosystems.
-
-      </p>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- ==================================================
-     CV
-================================================== -->
-
-<section id="cv">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      Curriculum Vitae
-    </h2>
-
-
-    <div class="cv-grid">
-
-
-      <!-- EDUCATION -->
-
-      <div class="cv-block">
-
-        <h3>
-          Education
-        </h3>
-
-
-        <div class="cv-item">
-
-          <div class="cv-year">
-            20XX – Present
-          </div>
-
-          <strong>
-            PhD in XXXXX
-          </strong>
-
-          <span>
-            University / Institute
-          </span>
-
-        </div>
-
-
-
-        <div class="cv-item">
-
-          <div class="cv-year">
-            20XX – 20XX
-          </div>
-
-          <strong>
-            Master's Degree
-          </strong>
-
-          <span>
-            University
-          </span>
-
-        </div>
-
-
-
-        <div class="cv-item">
-
-          <div class="cv-year">
-            20XX – 20XX
-          </div>
-
-          <strong>
-            Bachelor's Degree
-          </strong>
-
-          <span>
-            University
-          </span>
-
-        </div>
-
-
-      </div>
-
-
-
-      <!-- RESEARCH -->
-
-      <div class="cv-block">
-
-        <h3>
-          Research Interests
-        </h3>
-
-
-        <div class="cv-item">
-
-          <strong>
-            Satellite Remote Sensing
-          </strong>
-
-          <span>
-            Ocean colour and aquatic remote sensing
-          </span>
-
-        </div>
-
-
-
-        <div class="cv-item">
-
-          <strong>
-            Coastal Carbon Cycle
-          </strong>
-
-          <span>
-            POC and DOC dynamics
-          </span>
-
-        </div>
-
-
-
-        <div class="cv-item">
-
-          <strong>
-            Data Science
-          </strong>
-
-          <span>
-            Machine learning, geospatial analysis and Earth observation
-          </span>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-
-    <div style="margin-top:35px;">
-
-      <a
-        href="CV_Tao_Zhou.pdf"
-        target="_blank"
-        class="button button-dark">
-
-        Download Full CV
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ==================================================
-     CONTACT
-================================================== -->
-
-<section id="contact">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      Contact
-    </h2>
-
-
-    <div class="contact-box">
-
-      <p>
-
-        I am interested in research collaborations related to
-        coastal and marine remote sensing, ocean colour,
-        carbon cycling and Earth observation.
-
-      </p>
-
-
-      <p>
-
-        <strong>Email:</strong>
-
-        <a href="mailto:YOUR_EMAIL@example.com">
-
-          YOUR_EMAIL@example.com
-
-        </a>
-
-      </p>
-
-
-      <p>
-
-        <strong>GitHub:</strong>
-
-        <a
-          href="https://github.com/DanY-YB"
-          target="_blank">
-
-          github.com/DanY-YB
-
-        </a>
-
-      </p>
-
-
-      <p>
-
-        <strong>Google Scholar:</strong>
-
-        <a
-          href="YOUR_GOOGLE_SCHOLAR_URL"
-          target="_blank">
-
-          Google Scholar Profile
-
-        </a>
-
-      </p>
-
-
-      <p>
-
-        <strong>ORCID:</strong>
-
-        <a
-          href="YOUR_ORCID_URL"
-          target="_blank">
-
-          ORCID Profile
-
-        </a>
-
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-</main>
-
-
-
-<!-- ==================================================
-     FOOTER
-================================================== -->
 
 <footer>
 
-  <div class="container">
-
-    © 2026 Tao Zhou · Academic Website
-
-    <br>
-
-    Hosted on GitHub Pages
-
-  </div>
+  © 2026 Dan Yang
 
 </footer>
-
 
 </body>
 
